@@ -1,6 +1,8 @@
-$primary: #f89521;
+$primary-color: #f89521;
+$secondary-color: #22BBFF;
 $light: #e2e2e2;
 $dark: #555555;
 
+@import "variables";
 @import "materialize";
 @import "global";
