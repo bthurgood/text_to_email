@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
 
   skip_before_filter :verify_authenticity_token, only: :text_to_email
+  before_action :require_login, except: :text_to_email
 
   def index
   end

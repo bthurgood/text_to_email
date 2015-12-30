@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
 
+  before_action :require_login
   before_action :get_account, only: [:show, :edit, :update, :destroy]
 
   def index
