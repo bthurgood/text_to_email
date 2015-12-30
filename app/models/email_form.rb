@@ -1,5 +1,4 @@
 class EmailForm < MailForm::Base
-  include SendGrid
 
   attributes :sms_to, :validate => true
   attributes :sms_from, :validate => true

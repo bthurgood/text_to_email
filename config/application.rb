@@ -22,6 +22,19 @@ module TextToEmail
 
     config.secret_key_base = ENV['SECRET_TOKEN']
 
+
+    config.action_mailer.smtp_settings = {
+       user_name: ENV['SENDGRID_USERNAME'],
+       password: ENV['SENDGRID_PASSWORD'],
+       port: 587,
+       domain: 'heroku.com',
+       address: 'smtp.sendgrid.net',
+       authentication: "plain",
+       enable_starttls_auto: true
+     }
+
+    config.action_mailer.default_url_options = { :host => ENV['DOMAIN_NAME'] }
+
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
   end
