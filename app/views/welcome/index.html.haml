@@ -1,0 +1,13 @@
+= form_tag :welcome_email, url: welcome_email_path do
+
+  = label_tag :sms_to
+  = text_field_tag :sms_to
+
+  = label_tag :sms_from
+  = text_field_tag :sms_from
+
+  = label_tag :body
+  = text_field_tag :body
+
+  = submit_tag 'send'
+
