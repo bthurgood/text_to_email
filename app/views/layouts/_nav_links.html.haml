@@ -5,9 +5,9 @@
 -# - nav_link('about', about_path)
 -# - nav_link('contact', contact_path)
 - if signed_in?
+  %li.waves-effect.waves-nav{class: "#{'active' if params[:controller] == 'projects'}"}
+    = link_to 'Accounts', accounts_path
   %li.waves-effect.waves-nav
     = link_to 'Sign Out', sign_out_path, method: :delete
-  -#   %li.waves-effect.waves-nav{class: "#{'active' if params[:controller] == 'projects'}"}
-  -#     = link_to 'Projects', projects_path
 - else
   - nav_link('sign in', sign_in_path)

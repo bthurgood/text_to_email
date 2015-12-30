@@ -1,0 +1,27 @@
+- content_for(:page_title) do
+  Forwarded Accounts
+
+%table.bordered.responsive-table
+  %thead
+    %tr
+      %th{"data-field" => "name"} Name
+      %th{"data-field" => "email"} Email
+      %th{"data-field" => "actions"} Actions
+  %tbody
+    - @accounts.each do |account|
+      %tr
+        %td
+          = link_to account_path(account.id) do
+            = account.name
+        %td= account.email
+        %td.project-actions
+          = link_to edit_account_path(account.id), class: 'tooltipped', data: { position: "left", delay: "1", tooltip: "Edit" } do
+            %i.fa.fa-pencil
+          = link_to account_path(account.id), method: :delete, class: 'tooltipped', data: {confirm: "Are you sure you want to delete this account?", position: "right", delay: "1", tooltip: "Delete"} do
+            %i.fa.fa-trash
+
+.new-account
+  = link_to new_account_path, class: 'btn waves-effect waves-light' do
+    %i.fa.fa-plus
+    %span New Account
+

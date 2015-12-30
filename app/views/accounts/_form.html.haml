@@ -1,0 +1,14 @@
+= form_for(@account) do |f|
+  .row
+    .input-field.col.s12.m6
+      = f.text_field :name
+      = f.label :name
+    .input-field.col.s12.m6
+      = f.email_field :email
+      = f.label :email
+  .row
+    .input-field.col.s12
+      = f.submit nil, class: 'btn primary waves-effect waves-light'
+
+
+

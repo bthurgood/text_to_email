@@ -1,7 +1,8 @@
 %nav{:role => "navigation"}
   .nav-wrapper.container
     = link_to root_path, class: 'logo-container brand-logo' do
-      Jills Office Text
+      = image_tag('logo.png')
+      %span.logo-text Text To Email
     %ul.right.hide-on-med-and-down
       = render 'layouts/nav_links'
     %ul#nav-mobile.side-nav

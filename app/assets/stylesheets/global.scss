@@ -1,3 +1,23 @@
 html, body {
   color: $dark;
 }
+
+.btn.danger {
+  background-color: #FF271D
+}
+
+.logo-container {
+  img {
+    max-height: 55px;
+    padding-top: 10px;
+  }
+  .logo-text {
+    font-size: 0.6em;
+    position: relative;
+    bottom: 15px;
+  }
+}
+
+.new-account {
+  margin-top: 40px;
+}

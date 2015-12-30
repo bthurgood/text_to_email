@@ -14,6 +14,7 @@ gem 'clearance'
 gem 'haml-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'materialize-sass'
+gem 'font-awesome-rails'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'

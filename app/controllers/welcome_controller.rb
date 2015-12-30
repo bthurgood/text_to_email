@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
   end
 
   def text_to_email
-    email = EmailForm.new(sms_from: params['From'], sms_to: params['To'], body: params['Body'])
+    email = EmailForm.new(sms_from: params['From'], sms_to: params['To'], body: params['Body'], account_id: params[:id])
     email.deliver
     respond_to do |format|
       format.xml

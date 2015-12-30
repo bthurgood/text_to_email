@@ -1,0 +1,24 @@
+- content_for(:page_title) do
+  = @account.name
+
+%span
+  %strong Account Email:
+  = @account.email
+
+%br
+%br
+
+%span
+  %strong SMS Request Url
+  (paste this into Twilio):
+  %input{type: 'text', value: "#{forward_email_url(@account.id)}"}
+
+
+.new-account
+  = link_to edit_account_path(@account.id), class: 'btn waves-effect waves-light' do
+    %i.fa.fa-pencil
+    %span Edit Account
+
+  = link_to account_path(@account.id), method: :delete, class: 'tooltipped', data: {confirm: "Are you sure you want to delete this account?", position: "right", delay: "1", tooltip: "Delete"}, class: 'btn waves-effect waves-light danger' do
+    %i.fa.fa-trash
+    %span Delete Account
