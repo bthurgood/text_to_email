@@ -63,7 +63,6 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   config.action_mailer.smtp_settings = {
-     address: "smtp.mandrillapp.com",
      port: 587,
      domain: 'heroku.com',
      address: 'smtp.sendgrid.net',
